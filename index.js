@@ -26,10 +26,10 @@ module.exports = function (url, options) {
   const headers = {
     'User-Agent': opts.userAgent,
     'From': opts.fromEmail
-  };
+  }
   Object.keys(opts.customHeaders).forEach(function (key) {
-    headers[key] = opts.customHeaders[key];
-  });
+    headers[key] = opts.customHeaders[key]
+  })
 
   const requestOpts = {
     url: url,
