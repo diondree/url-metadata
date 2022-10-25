@@ -1,5 +1,5 @@
 {
-  "name": "@diondree/url-metadata",
+  "name": "@diondredev/url-metadata",
   "version": "2.6.0",
   "description": "Request an http(s) url and scrape its metadata.",
   "main": "index.js",
