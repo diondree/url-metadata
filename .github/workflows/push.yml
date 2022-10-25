@@ -1,0 +1,16 @@
+name: Build & Release
+on:
+  push:
+    branches: [main]
+jobs:
+  release:
+      name: Release package    
+      runs-on: ubuntu-latest
+      steps:
+      - run: yarn install && yarn lint
+      - uses: mikeal/merge-release@master
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+            DEPLOY_DIR: my/deploy/dir
+            SRC_PACKAGE_DIR: my/src/package
